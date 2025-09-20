@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Download, Edit, Printer, Settings } from "lucide-react";
+import { CloudDownload, Download, Edit, Printer, Settings } from "lucide-react";
 
 export function InvoiceNavigation() {
   const navItems = [
@@ -12,7 +12,7 @@ export function InvoiceNavigation() {
   ];
 
   return (
-    <div className="bg-white border-b">
+    <div className="bg-[#EFF6FF] border-b">
       <div className="px-10">
         <div className="flex items-center justify-between py-4">
           <div className="flex items-center space-x-2">
@@ -20,16 +20,17 @@ export function InvoiceNavigation() {
           </div>
 
           <div className="flex items-center space-x-2">
-            <Button className="bg-success hover:bg-success/90 text-success-foreground">
+            <Button className="bg-success hover:bg-success/90 text-success-foreground rounded-none">
               Mark As Paid
             </Button>
-            <Button variant="outline">Send Invoice</Button>
-            <Button variant="outline">
-              <Download className="w-4 h-4 mr-2" />
+            <Button variant="outline" className="rounded-none bg-white">
+              Send Invoice
+            </Button>
+            <Button variant="outline" className="rounded-none bg-white">
+              <CloudDownload className="w-4 h-4" />
               Download PDF
             </Button>
-            <Button variant="outline">
-              <Settings className="w-4 h-4 mr-2" />
+            <Button variant="outline" className="rounded-none bg-white">
               Customization
             </Button>
           </div>
@@ -43,7 +44,7 @@ export function InvoiceNavigation() {
                 className={`py-3 px-1 border-b-2 font-medium text-sm ${
                   item.active
                     ? "border-primary text-primary"
-                    : "border-transparent text-gray-500 hover:text-gray-700"
+                    : "border-transparent hover:text-gray-700"
                 }`}
               >
                 {item.label}
@@ -52,11 +53,11 @@ export function InvoiceNavigation() {
           </div>
 
           <div className="flex items-center space-x-2">
-            <Button variant="outline" size="sm">
+            <Button variant="outline" className="bg-white rounded-none">
               <Edit className="w-4 h-4 mr-2" />
               Edit Invoice
             </Button>
-            <Button variant="outline" size="sm">
+            <Button variant="outline" className="bg-white rounded-none">
               <Printer className="w-4 h-4 mr-2" />
               Print
             </Button>
