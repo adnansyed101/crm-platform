@@ -6,7 +6,7 @@ import { PaymentDetails } from "./components/payment-details";
 import { ActivityTimeline } from "./components/activity-timeline";
 import { BottomNavigation } from "./components/bottom-navigation";
 
-export default function InvoicePage() {
+export default function InvoiceDetailsPage() {
   return (
     <div className="min-h-screen bg-background">
       <InvoiceHeader />
